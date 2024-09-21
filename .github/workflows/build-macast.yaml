@@ -183,14 +183,14 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist linux x64
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_AMD64 }}
           path: ${{ needs.version.outputs.DIST_AMD64 }}
 
       - name: Upload dist deb
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_AMD64_DEB }}
@@ -250,14 +250,14 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist linux
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_ARMV7 }}
           path: ${{ needs.version.outputs.DIST_ARMV7 }}
 
       - name: Upload dist deb
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_ARMV7_DEB }}
@@ -317,14 +317,14 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist linux
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_ARMV8 }}
           path: ${{ needs.version.outputs.DIST_ARMV8 }}
 
       - name: Upload dist deb
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_ARMV8_DEB }}
@@ -372,14 +372,14 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_EXE32 }}
           path: ${{ needs.version.outputs.DIST_EXE32 }}
 
       - name: Upload dist debug
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_EXE32_DEBUG }}
@@ -422,14 +422,14 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_EXE }}
           path: ${{ needs.version.outputs.DIST_EXE }}
 
       - name: Upload dist debug
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_EXE_DEBUG }}
@@ -490,7 +490,7 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_DMG }}
@@ -553,7 +553,7 @@ jobs:
           echo "::set-output name=status::success"
 
       - name: Upload dist arm
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.compile_arm.outputs.status == 'success'
         with:
           name: ${{ needs.version.outputs.DIST_DMG_ARM }}
